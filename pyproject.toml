@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torchserve-grpc-demo"
+version = "1.0.0"
+authors = [
+    {name = "Vu Lam Nguyen", email = "lamnguyenvu98@gmail.com"},
+]
+description = "Torchserve demo"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = [
+    "requirements/torchserve.txt", 
+    "requirements/grpc.txt", 
+    "requirements/optional.txt", 
+]}
+
+[project.optional-dependencies]
+lru = ["lru-dict==1.3.0"]
+
+[tool.setuptools]
+packages = [
+    "src",
+    "src.grpc_python",
+    "src.handlers",
+    "src.models",
+    "src.ts_scripts"
+]
+
+[project.scripts]
+install-torch = "src.ts_scripts.install_dependencies:main"
