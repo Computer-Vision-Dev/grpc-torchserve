@@ -1,0 +1,10 @@
+minWorkers: 1
+maxWorkers: 1
+batchSize: 1
+maxNumSequence: 3
+sequenceMaxIdleMSec: 3
+maxSequenceJobQueueSize: 3
+
+handler:
+  cache:
+    capacity: 4
