@@ -1,0 +1,13 @@
+imutils
+torch
+torchvision
+onnxruntime==1.15.0
+ts
+onnx==1.15.0
+pyaml
+torchserve
+grpcio
+opencv-python
+scipy
+torch-model-archiver
+matplotlib
